@@ -13,6 +13,19 @@ Coordinate OpenSpec as the product-change record with Superpowers as the enginee
 
 Use OpenSpec to define and track what changes. Use Superpowers to decide how to discover, plan, implement, debug, review, and verify the work.
 
+## Required Skills
+
+This is a coordinator skill, not a standalone workflow. Before using it for real work, confirm these skills are installed and discoverable:
+
+- `openspec-workflow`
+- `using-superpowers`
+- `brainstorming`
+- `test-driven-development`
+- `systematic-debugging`
+- `verification-before-completion`
+
+If any required skill is unavailable, tell the user which prerequisite is missing and ask them to install it before continuing. Continue with a high-level outline only if the user explicitly asks for a degraded, non-executing guide.
+
 If this skill conflicts with a directly invoked skill, follow the more specific skill for its domain:
 
 - `openspec-workflow` owns OpenSpec artifact format, change lifecycle, and archive/PR conventions.

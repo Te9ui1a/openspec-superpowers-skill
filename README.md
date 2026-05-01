@@ -6,6 +6,33 @@ Use OpenSpec for the product-change record: proposals, designs, specs, tasks, va
 
 This repository does not vendor OpenSpec or Superpowers. It provides one coordinator skill that tells Codex when and how to load those more specific skills together.
 
+## Hard Dependencies
+
+This skill is intentionally not standalone. It assumes these prerequisites are installed and discoverable by your agent:
+
+- [OpenSpec](https://github.com/Fission-AI/OpenSpec), including the OpenSpec CLI for repositories that use OpenSpec.
+- An OpenSpec workflow skill named `openspec-workflow`, or an equivalent local skill that teaches your agent how to create and manage OpenSpec `proposal.md`, `design.md`, `specs/*/spec.md`, and `tasks.md` artifacts.
+- [Superpowers](https://github.com/obra/superpowers), including the process skills this coordinator references.
+
+Minimum Superpowers skills expected by this coordinator:
+
+- `using-superpowers`
+- `brainstorming`
+- `test-driven-development`
+- `systematic-debugging`
+- `verification-before-completion`
+
+Recommended Superpowers skills for the full workflow:
+
+- `problem-statement`
+- `user-story`
+- `prd-development`
+- `receiving-code-review`
+- `requesting-code-review`
+- `finishing-a-development-branch`
+
+If these dependencies are missing, install them first. Without them, this skill can only provide a high-level outline and cannot deliver its intended workflow.
+
 ## What This Is
 
 - A Codex skill named `openspec-superpowers`
@@ -24,14 +51,14 @@ This repository does not vendor OpenSpec or Superpowers. It provides one coordin
 For the full workflow, install and configure:
 
 - Codex with local skills support
+- [OpenSpec](https://github.com/Fission-AI/OpenSpec) CLI for repositories that use OpenSpec
 - The `openspec-workflow` skill
-- Superpowers skills, especially `using-superpowers`, `brainstorming`, `test-driven-development`, `systematic-debugging`, and `verification-before-completion`
-- OpenSpec CLI for repositories that use OpenSpec
+- [Superpowers](https://github.com/obra/superpowers) skills, especially `using-superpowers`, `brainstorming`, `test-driven-development`, `systematic-debugging`, and `verification-before-completion`
 - `git`
 - GitHub CLI (`gh`) if you want PR publishing
 - Claude Code CLI if your `openspec-workflow` setup delegates implementation through Claude Code
 
-If some dependencies are missing, Codex can still read this skill, but it will behave as a high-level guide instead of loading the detailed workflow skills.
+If the required OpenSpec or Superpowers skills are missing, install them before using this coordinator.
 
 ## Installation
 
