@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec Superpowers"
+  short_description: "Coordinate OpenSpec with Superpowers"
+  default_prompt: "Use $openspec-superpowers to run this product change through OpenSpec and Superpowers discipline."
